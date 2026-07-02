@@ -1,0 +1,16 @@
+1. The Gallery data is stored in an array of objects. instead of hard coding each 
+art work in HTML, , I loop through the array with forEach() and create each card 
+dynamically
+
+2. I wanted the user to add new artists while the page is running .
+ CreateElement() creates the new list item and a button, the new list item and button, then appendChild() 
+ adds them to the page.
+
+ 3.I used preventDefault() because without it, the form would submit and reload the page. I stop the default behavior so I can vaidate
+ the inputs and display a message in javascript.
+
+ 4. Local storage will enable my website to store data in the browser . I used it to remeber the user's name so it says 
+ it is there even after refereshing the page.
+
+ 5.ClassList.toggle() adds or removes a CSS class every time the banner is clicked, try it ! 
+ you'll see a caption then when you click on the banner again the caption dissappears.
