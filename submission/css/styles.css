@@ -535,3 +535,15 @@ hr {
     max-height: 25rem;
   }
 }
+
+.hidden-caption {
+  display: none;
+  margin-top: 15px;
+  font-size: 18px;
+  color: white;
+  font-style: italic;
+}
+
+.show-caption {
+  display: block;
+}

@@ -97,3 +97,10 @@ if (savedName) {
 nameInput.addEventListener("input", function () {
     localStorage.setItem("artistName", nameInput.value);
 });
+
+const banner = document.getElementById("banner");
+const bannerCaption = document.getElementById("bannerCaption");
+
+banner.addEventListener("click", function () {
+    bannerCaption.classList.toggle("show-caption");
+});
