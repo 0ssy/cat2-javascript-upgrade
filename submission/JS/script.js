@@ -20,10 +20,15 @@ artworks.forEach(function (artwork) {
     const card = document.createElement("div");
     card.className = "card";
 
-    card.innerHTML = `
-        <img src="${artwork.image}" alt="${artwork.name}">
-        <h3>${artwork.name}</h3>
-    `;
+    const image = document.createElement("img");
+    image.src = artwork.image;
+    image.alt = artwork.name;
+
+    const title = document.createElement("h3");
+    title.textContent = artwork.name;
+
+    card.appendChild(image);
+    card.appendChild(title);
 
     galleryGrid.appendChild(card);
 
