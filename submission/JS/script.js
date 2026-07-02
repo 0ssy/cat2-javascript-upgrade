@@ -84,3 +84,16 @@ registrationForm.addEventListener("submit", function (event) {
     formMessage.textContent = "Welcome " + name + "! Your artist profile has been created successfully.";
     registrationForm.reset();
 });
+
+const nameInput = document.getElementById("name");
+
+// Load saved name when page opens
+const savedName = localStorage.getItem("artistName");
+if (savedName) {
+    nameInput.value = savedName;
+}
+
+// Save whenever the user types
+nameInput.addEventListener("input", function () {
+    localStorage.setItem("artistName", nameInput.value);
+});
