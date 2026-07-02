@@ -65,3 +65,22 @@ addArtistBtn.addEventListener("click", function () {
     artistInput.value = "";
 
 });
+
+const registrationForm = document.getElementById("registrationForm");
+const formMessage = document.getElementById("formMessage");
+
+registrationForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const artstyle = document.getElementById("artstyle").value.trim();
+
+    if (name === "" || email === "") {
+        formMessage.textContent = "Please fill in all required fields.";
+        return;
+    }
+
+    formMessage.textContent = "Welcome " + name + "! Your artist profile has been created successfully.";
+    registrationForm.reset();
+});

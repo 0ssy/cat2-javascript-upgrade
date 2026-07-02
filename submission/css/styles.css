@@ -357,6 +357,12 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+#formMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #5a3e2b;
+}
+
 .reset-btn {
   background-color: #102542;
 }
