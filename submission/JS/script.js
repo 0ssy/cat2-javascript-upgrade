@@ -33,3 +33,35 @@ artworks.forEach(function (artwork) {
     galleryGrid.appendChild(card);
 
 });
+
+const artistInput = document.getElementById("artistInput");
+const addArtistBtn = document.getElementById("addArtistBtn");
+const artistList = document.getElementById("artistList");
+
+addArtistBtn.addEventListener("click", function () {
+
+    const artistName = artistInput.value.trim();
+
+    if (artistName === "") {
+        return;
+    }
+
+    const li = document.createElement("li");
+
+    li.textContent = artistName + " ";
+
+    const removeButton = document.createElement("button");
+
+    removeButton.textContent = "Remove";
+
+    removeButton.addEventListener("click", function () {
+        li.remove();
+    });
+
+    li.appendChild(removeButton);
+
+    artistList.appendChild(li);
+
+    artistInput.value = "";
+
+});
