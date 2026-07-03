@@ -51,3 +51,18 @@ addArtistBtn.addEventListener("click", function () {
     artistInput.value = "";//ready for the next artist
 
 });
+
+const registrationForm = document.getElementById("registrationForm");
+const forMessage = document.getElementById("forMessage");
+registrationForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const artstyle = document.getElementById("artstyle").value.trim();
+    if (name === "" || email === "") {
+        forMessage.textContent = "Please fill in all the required fields.";
+        return; // if either field is empty a message will be shown
+    }
+    forMessage.textContent = "Welcome " + name +  "! You have successfully registered yourself .";
+    registrationFormreset();
+});
