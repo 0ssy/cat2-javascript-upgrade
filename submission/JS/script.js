@@ -30,3 +30,24 @@ artworks.forEach(function (artwork) {
     card.appendChild(title);
     galleryGrid.appendChild(card);
 });
+
+const artisticInput = document.getElementById("artistInput");
+const addArtisBtn = document.getElementById("addArtistBtn");
+const artistList = document.getElementById("artistList");
+addArtistBtn.addEventListener("click", function () {
+    const artistName = artistInput.value.trim();//remove extra spaces before and after text
+    if (artistName === ""){
+        return;//just to make sutre the function stops immediately
+    }
+    const li = document.createElement("li");
+    li.textContent = artistName + " "; //creating the liost item<li></li>
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener("click", function () {
+        li.remove(); ///remove a specific list item when button is clicked
+    });
+    li.appendChild(removeButton);
+    artistList.appendChild(li); //new item to appear in <ul>
+    artistInput.value = "";//ready for the next artist
+
+});
