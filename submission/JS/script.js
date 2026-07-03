@@ -80,3 +80,4 @@ const bannerMessage = document.getElementById("bannerMessage");
 heroBanner.addEventListener("click", function () {
     bannerMessage.classList.toggle("show-Message");
 });//showing and hiding the element using the CSS class
+//showing and hiding the element using the CSS class
