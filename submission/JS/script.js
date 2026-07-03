@@ -64,5 +64,14 @@ registrationForm.addEventListener("submit", function (event) {
         return; // if either field is empty a message will be shown
     }
     forMessage.textContent = "Welcome " + name +  "! You have successfully registered yourself .";
-    registrationFormreset();
+    registrationForm.reset();
+});
+
+const nameInput = document.getElementById("name");
+const savedName = localStorage.getItem("artistName");
+if (savedName) {
+    nameInput.value = savedName;
+}
+nameInput.addEventListener("input", function () {
+    localStorage.setItem("artistName", nameInput.value);
 });
