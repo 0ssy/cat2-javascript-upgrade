@@ -75,3 +75,8 @@ if (savedName) {
 nameInput.addEventListener("input", function () {
     localStorage.setItem("artistName", nameInput.value);
 });
+const heroBanner = document.getElementById("heroBanner");
+const bannerMessage = document.getElementById("bannerMessage");
+heroBanner.addEventListener("click", function () {
+    bannerMessage.classList.toggle("show-Message");
+});//showing and hiding the element using the CSS class
